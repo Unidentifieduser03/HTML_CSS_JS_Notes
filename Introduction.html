@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal css apply by using style tag -->
+    <style>
+        p{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1 is html tag. title is html attributes. style is also attributes use for inline css. -->
+    <h1 style="background-color: orange;" title="My Introduction">My name is Aman pandey.</h1>
+    <br>
+    <p>I am software engineer.</p>
+    <button id="buttonId" onClick={clickMeHandler()}>Submit</button>
+
+    <!-- Internal css by using the script tag. -->
+    <script>
+        function clickMeHandler(){
+            window.alert("submit button clicked successfully.");
+        }
+    </script>
+</body>
+</html>
