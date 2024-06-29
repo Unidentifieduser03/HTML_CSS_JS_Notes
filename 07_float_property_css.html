@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>float/navigation_bar/by_list</title>
+   <style>
+    /*nav tag css*/
+      nav{
+         background-color: black; /*3*/
+         overflow: hidden;          /*6*/
+         position:sticky;           /*7*/
+         top: 0;                    /*8*/
+         border-radius: 10px;
+      }
+      
+      /*ul tag css*/
+      nav ul{
+         list-style-type: none;
+      }
+
+      /*a tag css*/
+      nav li a{
+         text-decoration: none;    /*1*/
+         color: white;           /*2*/
+         padding: 2px;             /*4*/
+         float: left;              /*5*/
+         margin: 1px 2px 17px 1px;
+      }
+
+      /*a tag hover css*/
+      nav li a:hover{
+         color: greenyellow;
+     }
+
+     /*input tag css*/
+      nav input{
+         float: right;
+         margin: 0px 51px 3px 1px;
+         border-radius: 11px;
+         border: 2px solid violet;
+         padding: 4px;
+         width: 14pc;
+        }
+    
+   </style>
+</head>
+<body>
+
+   <nav>
+      <ul>
+         <li><a href="#" target="_blank">Home</a></li>
+         <li><a href="#" target="_blank">Courses</a></li>
+         <li><a href="#" target="_blank">AboutUs</a></li>
+         <li><a href="#" target="_blank">Payment</a></li>
+         <input type="text" id="search" name="search" placeholder="Search here">
+
+      </ul>
+   </nav>
+</body>
+</html>
