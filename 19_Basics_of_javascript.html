@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn the concepts of javascript</title>
+</head>
+<body>
+    <h1>Today we Learn the concepts of DOM in JavaScript.</h1>
+    <h1 id="greet">Hello,</h1>
+    <h3 style="color:red;">This is Aman pandey.</h3>
+    <p id="address" title="my address">I am living in the gaziabad.</p>
+    <button onClick="fun1()">Click here to see changes</button>
+    <hr>
+    <hr>
+    <input id="id1" placeholder="Enter your name."><br>
+    <button onClick="fun2()">Show Name</button>
+    <p id="id2"></p>
+
+    <script>
+        /*JavaScript can access the html elements
+            1). By "id" name :-
+                document.getElementById("id-name");
+
+            2). By "class" name:-
+                document.getElementsByClassName("class-name");
+
+            3). By css selectors:-
+                document.querySelector('h1'); //select h1 tag.
+                document.querySelector('ul>li'); //select only first li tag.
+                document.querySelectorAll('ul>li'); //select all li tag.
+                document.querySelector('#id-name');
+                document.querySelector('.class-name');
+        */
+
+        //What changes made by javascipt
+        function fun1(){
+            //JavaScript can change content.
+                document.getElementById("greet").innerHTML = "Hi,";
+
+            //JavaScript can change styles.
+                document.querySelector('h3').style.color = "green";
+
+            //JavaScript can change attributes.
+                document.getElementById("address").title = "Permanent address";
+        }
+
+
+        //JavaScript can access data of input tag
+        function fun2(){
+            document.getElementById('id2').innerHTML ="My name is : " + document.getElementById('id1').value;
+        }
+
+    </script>
+</body>
+</html>
