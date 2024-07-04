@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes, varibles, Arithmatic</title>
+</head>
+<body>
+    <hr><hr>
+    <h1>Datatypes, Variables and Arithmatic operations</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+
+    <script>
+            console.log("*********Datatype, Variables**********");
+            //"var" datatype********
+            var a1 = 78; 
+            var a2 = 'a';
+            var a3 = "aman"; 
+            a4 = 34.5; 
+            var a5 = true;
+            var a6 = null;
+            var a7 = undefined;
+            console.log("a1 is integer type : " + a1);
+            console.log(`a2 is char type : ${a2}`);
+            console.log("a3 is string type : " + a3);
+            console.log("a4 is float type : " + a4);
+            console.log("a5 is bool type " + a5);
+            console.log("a6 is null : " + a6);
+            console.log("a7 is undefined : " + a7);
+    
+            //"let" datatype**********
+            let a8 = "out";
+            {
+                let a8 = "in"; //scope only in this block.
+                console.log(a8);  //in
+            }
+            console.log(a8); //out
+    
+            //"const" datatype***********
+            const a9 = "This cannot be changed";
+            //a9 = "I want to change a9"; //This generate error
+            console.log(a9);
+
+            console.log("*********Arithmatic operations*********") 
+            var num1 = 10;
+            var num2 = 2;
+            console.log("Addition of num1 and num2 : " + (num1 + num2));
+            console.log("Subtraction of num1 and num2 : " + (num1 - num2));
+            console.log("Multiplication of num1 and num2 : " + (num1 * num2));
+            console.log("Division of num1 and num2 : " + (num1 / num2));
+            console.log("Power of num1 and num2 : " + (num1 ** num2));
+            console.log("The value of num1++ : " + (num1++));
+            console.log("The value of ++num1 : " + (++num1));
+    </script>
+</body>
+</html>

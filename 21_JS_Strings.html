@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings</title>
+</head>
+<body>
+
+    <hr><hr>
+    <h1>Strings in the JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+    
+    <script>
+        console.log("*********Create strings***********")
+        var name = "aman";
+        var lastname = "padey";
+        console.log(`What is your name : ${name} ${lastname}`);
+        console.log("lenght of string : " + name.length);
+ 
+ 
+        console.log("*********String mathods***********")
+        var s = "My best friend is Aman, His lastname name is swami.";
+        console.log(s);
+
+        //"indexOf" method give output of First occurence of a substring*****************
+        var position = s.indexOf('is');
+        console.log("indexOf : " + position);
+
+        //"lastIndexOf" method of occurence of substring*****************
+        position = s.lastIndexOf('is');
+        console.log("lastIndexOf : " + position);
+
+        //"slice" method of string*****************
+        var word = s.slice(1, 6); //print index 1 to 5;
+        console.log("slice : "+word);
+
+        //"substring" method of string*****************
+        var word = s.substring(1, 6); //print index 1 to 5;
+        console.log("substring : "+word);
+
+        //"substr" method*****************
+        var word = s.substr(1, 6); //print index 1 to 6;
+        console.log("substr : "+word);
+
+        //"replace" method use to replace any word inside the string*****************
+        var replace_var = s.replace('swami', 'swamiji');
+        console.log(s);
+        console.log("replace : " + replace_var);
+
+        // "toUpperCase" method and "toLowerCase" method*****************
+        console.log("toUpperCase : "+s.toUpperCase());
+        console.log("toLowerCase : "+s.toLowerCase());
+
+        // "concat" mathod is use for connect two strings*****************
+        var newstring = s.concat(' A good software developer.');
+        console.log("concat : "+newstring);
+
+        // remove white spaces from first and last*****************
+        var strWhitespaces = "      My name is aman         padey       ";
+        console.log(strWhitespaces);
+        console.log("trim : "+strWhitespaces.trim());
+
+        // "charAt" method is use to return character from string*****************
+        var char_1 = s.charAt(3);   //first method of extracting character from string
+        var char_2 = s.charCodeAt(3);   //return code of code that was extract from string 
+        console.log("charAt : "+ char_1);
+        console.log("charCodeAt : " + char_2);
+
+
+        //split() method********************
+            let text = "hello my name is aman";
+            const myArray = text.split("o");
+            console.log("split : "+myArray[0]);
+
+        //To remove extra spaces
+            let a = "   My  name is                    aman   kumar. I am engineer                by professions           .       ";
+            let b = a.split(/[ ]+/);
+            let c = b.join(" ");
+            console.log("remove extra space : "+a);
+
+        //any-number.toString(base of no. system we want that system)
+            let myNumber = 32;
+            console.log("Decimal 32 : " + myNumber)
+            console.log("Hexatrigesimal (base 36) : " + myNumber.toString(36))
+            console.log("Duotrigesimal (base 32) : " + myNumber.toString(32))
+            console.log("Hexadecimal (base 16) : " +  myNumber.toString(16) )
+            console.log("Duodecimal (base 12) : " +  myNumber.toString(12))
+            console.log("Decimal (base 10) : " + myNumber.toString(10))
+            console.log("Octal (base 8) : " + myNumber.toString(8)) 
+            console.log("Binary (base 2): " + myNumber.toString(2)) 
+    
+    </script>
+</body>
+</html>
