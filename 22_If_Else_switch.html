@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else Switch</title>
+</head>
+<body>
+    <hr><hr>
+    <h1>if-else and switch conditional statements</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+
+    <script>
+
+        console.log("*****if-else conditions*****"); 
+        let age = 20;
+        if(age<18){
+            console.log("You cannot attend the party");
+        }
+        else if(age==18){
+            console.log("You enter in party but not drink");
+        }
+        else{
+            console.log("You can do everthing in the party");
+        }
+  
+  
+        console.log("*****switch case statements*****");
+        let x=10, y=2, selection=2;
+        switch(selection){
+            case 1: console.log("Addition of x and y is "+(x+y));
+                break;
+            case 2: console.log("subtraction of x and y is "+(x-y));
+                break;
+            case 3: console.log("multiply of x and y is "+(x*y));
+                break;
+            case 4: console.log("division of x and y is "+(x/y));
+                break;
+            default: console.log("error");
+                break;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and objects</title>
+</head>
+<body>
+    <hr><hr>
+    <h1>Arrays, Arrays methods and objects in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+
+
+    <script>
+
+        console.log("*****Concepts of objects*****")
+        let employee ={   
+            name: "aman",
+            age: 20,
+            address1: "delhi",
+            "address 2": "banglore",
+        }
+        console.log(employee);
+        console.log(employee.name);
+        console.log(employee.age);
+        console.log(employee['address1']);
+        console.log(employee['address 2']); 
+
+        console.log(Object.keys(employee)); //access keys of objects
+
+
+        console.log("*****Concepts of Array*****")
+        let AllinOne = [1, 10, 4, "Harry",true];  
+        console.log(AllinOne); 
+        console.log(AllinOne[0]);
+        console.log(AllinOne[1]);
+        console.log(AllinOne.length);   //calculate the length of an array
+
+        console.log("*****Methods of array*****");
+        //1). push method, for adding new element inside array
+            AllinOne.push('I am aman')
+            console.log("after push : " + AllinOne);  
+            
+        //2). pop method, this delete last element of array
+            AllinOne.pop();
+            console.log("after pop : " + AllinOne);  
+
+        //3). join method, converts the array into a string.
+            console.log("join : "+AllinOne.join(" "));
+
+        //4). concat method, merges arrays.
+            const arr1 = [1,3,5,7];
+            const arr2 = [2,4,6,8];
+            console.log("arr1+arr2 : "+arr1.concat(arr2));
+
+        //5). The splice() method adds new elements to an array
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.splice(2,0,"Lemon", "Kiwi", "kakdi");
+            console.log("after splice method : "+fruits)
+
+        //6). The toString() method returns an array as a comma separated string
+            console.log("after toString method : "+fruits.toString());
+
+        //7). The unshift() method adds new elements to the beginning of an array
+            fruits.unshift("Lemon");    
+            console.log("after unshift method : "+fruits);
+
+        //8). slice() method, it selects array elements from the start argument, and up to (but not included) the end argument.   
+            console.log("After slice method : "+fruits.slice(1,3))
+
+        //9). sort() method 
+            fruits.sort();
+            console.log("After sort method : "+ fruits)
+
+        //10. reverse() method
+            fruits.reverse(); 
+            console.log("After reverse method : "+fruits);
+
+
+    </script>
+</body>
+</html>
