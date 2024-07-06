@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-- Alert,confirm,prompt,functions</title>
+</head>
+<body>
+
+    <hr><hr>
+    <h1>Learn concepts of Alert, Confirm, Prompt and Functions in JS</h1>
+    <h2>See results of Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+    <button onClick="showAlertHandler()">Show alert</button>
+    <button onClick="startToConfirmHandler()">Make confirmation</button>
+    <button onClick="takeInputHandler()">Take input</button>
+
+    <script>
+
+        console.log("********Simple function output**********")
+            //define greet function
+            function greet(x){
+                console.log(`${x} is a good boy.`);
+            }
+            //call greet function 
+            let name1 = "Harry";
+            greet(name1);
+
+
+            //define sum function
+            function sum(a,b,c){
+                let d = a+b+c;
+                return d;
+            }
+            //call the sum() function
+            console.log("Sum of 1,2,3 (simple function) : "+sum(1,2,3));
+
+        console.log("********Arrow function output********")
+            let sum2 = (a, b, c) => {
+                let d = a+b+c;
+                return d;
+            }
+            console.log("Sum of 1,2,3 (arrow function) : "+sum2(1,2,3)); 
+
+
+        console.log("********Arrow Function in objects output********")
+            let obj1 = {
+                name: "Aman",
+                favCar: ["BMW", "Audi", "G wagon", "Bently"],
+                speak(){
+                    console.log(`Hello ${obj1.name}, Good morning`);
+                }
+            }
+            obj1.speak();
+        
+
+        //alert****************
+            let showAlertHandler = ()=>{
+                alert("This is alert, you can show your important message in alert to clients...");
+            }
+
+        //confirm****************
+            let startToConfirmHandler = ()=>{
+                let answer = confirm("Do you like coding...");
+                alert(`I like coding is ${answer}...`);
+            }
+        
+        //prompt****************
+            let takeInputHandler = ()=>{
+                let name = prompt("What is your name?","Enter here...");
+                alert(`Your name is ${name}.`)
+            }
+
+    </script>
+</body>
+</html>
