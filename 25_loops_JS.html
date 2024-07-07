@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS --loops</title>
+</head>
+<body>
+    <hr><hr>
+    <h1>Loops in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+
+    <script>
+    console.log("*****For loop output*****");     
+        for(let i=0;i<3;i++){
+            console.log(i);
+        }
+
+    console.log("*****while loop output*****");
+        let i = 0;
+        while(i<4){
+            console.log(`${i} is less than 4`);
+            i++;
+        }
+
+    console.log("*****do-while loop output*****");
+        let j = 0;
+        do{
+            console.log(`${j} is less than 4`);
+            j++;
+        }while(j<4);
+    
+    console.log("*****for loop of arrays*****");
+        let friends = ["vaibhav", "vimal", "himanshu", "aman", "taanish"];
+
+        console.log("*****1st method*****");
+        for(let i=0; i<friends.length; i++){//here i is index
+            console.log(friends[i]);
+        }
+    
+        console.log("*****2nd method*****");
+        for(i in friends){//here i is index
+            console.log(friends[i]);
+        }
+        
+        console.log("*****3rd method*****");
+        for(i of friends){ //here i is value
+            console.log(i);
+        }
+        
+        console.log("*****4rth method*****");
+        friends.forEach((i)=>{ //here i is value
+                console.log(i);
+            }      
+        );
+    
+    
+    console.log("*****for loop for objects*******")
+        let employee = {
+            name: "harry",
+            salary: 2,
+            channel: "CWH",
+        }
+        for(i in employee){
+            console.log(employee[i]);
+        }
+
+    </script>
+</body>
+</html>
