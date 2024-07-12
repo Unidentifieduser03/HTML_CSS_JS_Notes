@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<body>
+    <h1>Arrays, Arrays methods and objects in JavaScript</h1>
+    <p>Browser envents: onClick, onChange, mouseover, mouseout, mousedown, mouseup, mousemove, contextmenu, submit, focus, DOMCotentLoaded, transitionend</p>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+    <hr><hr>
+
+    <button onClick="loginHandler()">Click me for Login</button>
+    <p id="id1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis quisquam magni quod modi obcaecati veritatis temporibus, doloremque quo nobis? Magnam, dolor. Enim, numquam! Eaque, ut dolores sunt debitis, magnam nisi sint adipisci placeat ad tempora vel laborum enim, voluptate sed at facere vitae natus cum dicta eum maiores voluptatem libero laudantium autem? Autem ducimus quae, in consectetur alias itaque aperiam, nisi quo iusto laborum sunt tempora, facilis totam quod dolores a porro facere. Nostrum incidunt eos blanditiis hic in exercitationem corrupti est culpa, iure magni ipsam eaque dolor minima quidem officiis. Maxime aliquam minima numquam sunt ipsam! Obcaecati culpa nostrum sit. Numquam, est ut? Ipsam iusto qui tempora animi inventore quis facilis magnam ullam eaque explicabo ad eum rem sapiente ipsa non dolores et harum perferendis facere, consequatur dicta quod dolor eos quam. Nam iusto inventore aut culpa animi quasi ipsam ab, rem vitae reiciendis asperiores delectus, soluta est! Ea nobis repudiandae magnam at dolorem perferendis delectus repellat dicta magni, alias, perspiciatis illo praesentium aspernatur ab reiciendis expedita laborum voluptate, mollitia ratione possimus tenetur placeat quae facere! Tempora nisi ipsum voluptatem. Dolorum sapiente dicta officia numquam at labore, autem, aspernatur cum rerum illum soluta. Et tempora ea laudantium quibusdam!</p>
+
+    <script>
+
+        //onClick event
+        function loginHandler(){
+            alert("Login successfully.")
+        }
+    
+        //mouseover, mouseout event
+        let x = document.getElementById('id1');
+        x.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside the peragraph')
+        });
+        x.addEventListener('mouseout', function run(){
+            console.log('Mouse outside the peragraph')
+        });
+
+        //keyup, keydown event
+        document.addEventListener('keydown', function(e){
+            console.log(e.key);
+        })
+
+    </script>
+</body>
+</html>
