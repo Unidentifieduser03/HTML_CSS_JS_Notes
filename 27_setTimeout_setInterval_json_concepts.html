@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeout</title>
+</head>
+<body>
+
+    <h1>setInterval, setTimeout and concept of json</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2>
+    <hr><hr>
+
+    <script>
+        
+        function greet(x, y) {
+           console.log("Hello Good Morning " + x + " " + y);
+        }
+  
+        //setTimeout : Allows us to run the function once after the interval of time
+            var a = setTimeout(greet, 3000, "Aman", "Take care");
+            //clearTimeout(a); //by this we cancelled the setTimeout
+  
+        //setInterval : Allows us to run the function repeatedly after the interval of time
+            var b = setInterval(greet, 4000, "vimal", "How are you");
+            //clearInterval(b); //by this we cancelled the setInterval
+
+
+        //Concept of JSON**********************
+            let obj = {
+                name: "Aman",
+                roll: 2125635,
+                lname: "Pandey",
+                fathername: "Harish kumar pandey",
+            }
+            console.log(obj);
+
+            //convert object to string
+                let x = JSON.stringify(obj);
+                console.log(x);
+
+            //convert string to object
+                let y = JSON.parse(x);
+                console.log(y); 
+    </script>
+</body>
+</html>

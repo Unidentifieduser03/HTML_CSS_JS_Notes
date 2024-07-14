@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time</title>
+</head>
+<body>
+    <h1>Date and time in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2><hr><hr>
+    <div class="container">
+        The date and time : <span id="id1"></span>
+    </div>
+
+    <script>
+
+        let a = new Date();
+        console.log("a : "+a);
+
+        let c = new Date("2022-12-26");
+        console.log("c : "+c);
+
+        let d = new Date(2025, 8, 2, 10, 10, 10, 10); //Date(year, month, date, hours, minutes, seconds, milliseconds)
+        console.log("d : "+d);
+
+        //some functions
+            let yt = d.getFullYear();
+            console.log("getFullYear : " + yt);
+
+            let mt = d.getMonth();
+            console.log("getMonth : " + mt);
+
+            let dt = d.getDate();
+            console.log("getDate : " + dt);
+
+            let hr = d.getHours();
+            console.log("getHours : " + hr);
+
+        //Access day name from date()
+            const arr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            console.log("day : "+arr[d.getDay()]);
+
+        //Set date mannually by using the function
+            d.setFullYear(2022);
+            d.setDate(15);
+            console.log("mannually updated date : "+d);
+
+        //date function
+            function fun() {
+                id1.innerHTML = new Date();
+            }
+            setInterval(fun,1000);
+    </script>
+</body>
+</html>
