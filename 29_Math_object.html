@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math object</title>
+</head>
+<body>
+    <h1>Math object in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2><hr><hr>
+    
+    <button onClick="generateNumber()">Click to get random number</button>
+    <h3 id="randomId"></h3>
+
+    <script>
+    console.log("*****Math Object*****")
+        let m = Math;
+        console.log(m);
+
+    //constants from Math Object
+        console.log("Math.E : ", Math.E);
+        console.log("Math.PI : ", Math.PI);
+        console.log("Math.LN2 : ", Math.LN2);
+        console.log("Math.SQRT1_2 : ", Math.SQRT1_2);
+        console.log("Math.LOG2E : ", Math.LOG2E);
+
+    //methods from Math Objects
+        //round()
+        console.log("round(34.64534) : "+ Math.round(34.64534));
+        console.log("round(78) : "+ Math.round(78));
+
+        //power, sqrt()
+        console.log("pow(3,2) : "+ Math.pow(3,2));
+        console.log("sqrt(36) : "+ Math.sqrt(36));
+
+        //ceil(), floor()
+        console.log("ceil(5.8) : "+ Math.ceil(5.8)); //Rounded up to nearest integer
+        console.log("floor(5.8) : "+ Math.floor(5.8)); //Rounded down to nearest integer
+
+        //Absolute value
+        console.log("abs(5.66) : " + Math.abs(5.66));
+        console.log("abs(-5.66) : " + Math.abs(-5.66));
+
+        //Trigonometric 
+        console.log("sin(pi/2) : " + Math.sin(Math.PI/2)); 
+
+        //min(), max() 
+        console.log("min(4,5,6) : " + Math.min(4, 5, 6));
+        console.log("max(4,5,6) : " + Math.max(4, 5, 6));
+
+        //random()
+        console.log("The random number between 0 and 1 : " + Math.random());
+    
+        function generateNumber(){
+            //number between 1(included) and 100(not included)
+            let a1 = 1;
+            let b1 = 100;
+            let R = a1 + (b1-a1)*Math.random();
+            document.getElementById('randomId').innerHTML = "The random number between 1 and 100 : "+Math.floor(R);
+        }
+
+    </script>
+</body>
+</html>
