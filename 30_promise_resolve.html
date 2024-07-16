@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise resolve</title>
+</head>
+<body>
+    <h1>promise resolve in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2><hr><hr>
+
+    <script>
+        //create new promise
+            const promise1 = new Promise((resolve, reject)=>{
+                let flag = false;
+                setTimeout(()=>{
+                    flag?resolve("resolve code run in then"):reject("reject code run in catch")
+                }, 2000)
+            })
+            console.log(promise1)
+
+        //resolve promise by .then, .catch
+            promise1.then((a)=>{
+                console.log("a : "+a)
+            }).catch((b)=>{
+                console.log("b : "+b)
+            });
+
+        //resolve promise by async, await
+            let fun1 = async()=>{
+                try{
+                    let res = await promise1;
+                    console.log("res : "+res);
+                } 
+                catch(error){
+                    console.log("error : "+error)
+                }
+            }
+            fun1();
+        
+        //api promise
+            //const promise2 = fetch('url', {})
+
+        //resolve promise by .then, .catch"
+            // promise2.then((res)=>{
+            //      return res.json()
+            // }).then((json)=>{
+            //      console.log(json)
+            // }).catch((error)=>{
+            //      console.log(error)
+            // });
+
+        //resolve promise by async, await
+            //let fun2 = async()=>{
+            //    try{
+            //        let res = await promise2;
+            //        let json = await res.json();
+            //        console.log(json);
+            //    } 
+            //    catch(error){
+            //        console.log(error)
+            //    }
+            //}
+            //fun2();
+    </script>
+</body>
+</html>
