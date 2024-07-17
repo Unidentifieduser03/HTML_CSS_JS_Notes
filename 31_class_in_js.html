@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class in JS</title>
+   
+</head>
+
+<body>
+    <h1>class in JavaScript</h1>
+    <h2>See results in Console :- Right click ->inspect -> Console</h2><hr><hr>
+
+    <script>
+        class car{
+            constructor(name, color, speed){
+                this.name = name;
+                this.color = color;
+                this.topSpeed = speed;
+                this.currentSpeed = 0;
+            }
+            drive(){    
+                this.currentSpeed += 10;
+            }
+            break(){
+                this.currentSpeed -= 10;
+            }
+            stop(){
+                this.currentSpeed  = 0;
+            }
+        }
+
+        let bmw = new car("bmw","light blue", 200);
+        console.log("car name : "+bmw.name)
+        console.log("car color : "+bmw.color)
+        console.log("car topSpeed : "+bmw.topSpeed)
+        console.log("current speed now : "+bmw.currentSpeed)
+        bmw.drive();
+        bmw.drive();
+        console.log("current speed after drive : "+bmw.currentSpeed)
+        bmw.break();
+        console.log("current speed after break : "+bmw.currentSpeed)
+        bmw.stop();
+        console.log("current speed after stop : "+bmw.currentSpeed)
+            
+    </script>
+</body>
+
+</html>
